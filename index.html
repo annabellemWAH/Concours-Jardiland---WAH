@@ -1,1 +1,902 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Concours Jardiland x WAH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:#F7F2EC}header{background:#E8725A;padding:40px 20px;text-align:center;color:white}.logo{font-size:14px;letter-spacing:3px;margin-bottom:20px}.brands{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-bottom:25px}.pill{background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.5);border-radius:30px;padding:8px 20px;font-weight:700;font-size:14px}h1{font-size:clamp(28px,8vw,52px);font-weight:900;text-transform:uppercase;line-height:1.1;margin-bottom:15px}.badge{display:inline-block;background:white;color:#E8725A;font-size:clamp(22px,6vw,38px);font-weight:900;padding:10px 30px;border-radius:50px;margin:15px 0}.sub{font-size:14px;opacity:0.9}.dates{background:#3D5166​​​​​​​​​​​​​​​​
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concours Jardiland × WAH – Gagnez un bon d'achat 50€</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<style>
+:root {
+--coral: #E8725A;
+--slate: #3D5166;
+--slate-dk: #2C3E52;
+--white: #FFFFFF;
+--sand: #F7F2EC;
+--text: #2A2A2A;
+--mid: #666;
+}
+
+```
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+font-family: 'Barlow', sans-serif;
+background: var(--sand);
+color: var(--text);
+min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+background: var(--coral);
+padding: 48px 24px 56px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+top: -60px; right: -60px;
+width: 260px; height: 260px;
+border-radius: 50%;
+background: rgba(255,255,255,0.08);
+}
+.hero::after {
+content: '';
+position: absolute;
+bottom: -80px; left: -40px;
+width: 200px; height: 200px;
+border-radius: 50%;
+background: rgba(255,255,255,0.06);
+}
+
+.hero-brand {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+margin-bottom: 32px;
+flex-wrap: wrap;
+}
+.brand-pill {
+background: rgba(255,255,255,0.18);
+border: 2px solid rgba(255,255,255,0.4);
+border-radius: 40px;
+padding: 8px 22px;
+color: white;
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 700;
+font-size: 1.3rem;
+letter-spacing: 2px;
+}
+.brand-x {
+color: white;
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 900;
+font-size: 1.6rem;
+opacity: 0.7;
+}
+
+.hero h1 {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 900;
+font-size: clamp(2.4rem, 8vw, 4rem);
+color: white;
+line-height: 1.0;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 16px;
+position: relative;
+z-index: 1;
+}
+.hero h1 span {
+display: block;
+font-size: clamp(3rem, 10vw, 5.5rem);
+color: white;
+}
+
+.prize-badge {
+display: inline-block;
+background: white;
+color: var(--coral);
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 900;
+font-size: clamp(1.8rem, 6vw, 3rem);
+padding: 12px 32px;
+border-radius: 60px;
+margin: 20px 0;
+letter-spacing: 1px;
+box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+position: relative;
+z-index: 1;
+}
+
+.hero-sub {
+color: rgba(255,255,255,0.9);
+font-size: 1.05rem;
+font-weight: 500;
+margin-top: 8px;
+position: relative;
+z-index: 1;
+}
+
+.dates-strip {
+background: var(--slate);
+color: white;
+text-align: center;
+padding: 14px 24px;
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 700;
+font-size: 1.1rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.dates-strip span { color: var(--coral); }
+
+/* ── MAIN LAYOUT ── */
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* ── HOW IT WORKS ── */
+.how {
+padding: 44px 24px 36px;
+}
+.section-label {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 700;
+font-size: 0.8rem;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(--coral);
+margin-bottom: 8px;
+}
+.section-title {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: clamp(1.8rem, 5vw, 2.5rem);
+color: var(--slate-dk);
+line-height: 1.1;
+text-transform: uppercase;
+margin-bottom: 28px;
+}
+
+.steps {
+display: grid;
+gap: 16px;
+}
+.step {
+display: flex;
+align-items: flex-start;
+gap: 16px;
+background: white;
+border-radius: 16px;
+padding: 20px;
+box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.step-num {
+flex-shrink: 0;
+width: 42px; height: 42px;
+background: var(--coral);
+color: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 900;
+font-size: 1.3rem;
+}
+.step-text strong {
+display: block;
+font-weight: 600;
+color: var(--slate-dk);
+margin-bottom: 4px;
+}
+.step-text p { color: var(--mid); font-size: 0.92rem; line-height: 1.5; }
+
+/* ── FORM ── */
+.form-section {
+background: var(--slate);
+padding: 48px 24px;
+clip-path: polygon(0 24px, 100% 0, 100% calc(100% - 24px), 0 100%);
+margin: 0;
+}
+.form-section .section-label { color: var(--coral); }
+.form-section .section-title { color: white; }
+
+.form-card {
+background: white;
+border-radius: 20px;
+padding: 32px 28px;
+box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+}
+
+.field-group {
+display: grid;
+gap: 16px;
+margin-bottom: 20px;
+}
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+label {
+display: block;
+font-size: 0.8rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+color: var(--slate);
+margin-bottom: 6px;
+text-transform: uppercase;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+width: 100%;
+padding: 13px 16px;
+border: 2px solid #E8E8E8;
+border-radius: 10px;
+font-family: 'Barlow', sans-serif;
+font-size: 1rem;
+color: var(--text);
+transition: border-color 0.2s;
+outline: none;
+-webkit-appearance: none;
+}
+input:focus { border-color: var(--coral); }
+
+.checkbox-group {
+margin-bottom: 20px;
+}
+.checkbox-group legend {
+font-size: 0.8rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+color: var(--slate);
+text-transform: uppercase;
+margin-bottom: 10px;
+display: block;
+}
+.check-options {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+.check-label {
+display: flex;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+font-size: 0.95rem;
+color: var(--text);
+font-weight: 500;
+background: var(--sand);
+border: 2px solid #E8E8E8;
+border-radius: 10px;
+padding: 10px 16px;
+transition: all 0.2s;
+flex: 1;
+min-width: 120px;
+text-transform: none;
+letter-spacing: 0;
+}
+.check-label input { display: none; }
+.check-label:has(input:checked),
+.check-label.checked {
+border-color: var(--coral);
+background: #FDF1EE;
+color: var(--coral);
+}
+.check-icon {
+width: 20px; height: 20px;
+border-radius: 50%;
+border: 2px solid #CCC;
+flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.2s;
+}
+.check-label:has(input:checked) .check-icon {
+background: var(--coral);
+border-color: var(--coral);
+}
+.check-icon::after {
+content: '';
+width: 6px; height: 6px;
+border-radius: 50%;
+background: white;
+opacity: 0;
+transition: opacity 0.2s;
+}
+.check-label:has(input:checked) .check-icon::after { opacity: 1; }
+
+.divider {
+border: none;
+border-top: 1px solid #EBEBEB;
+margin: 24px 0;
+}
+
+/* Instagram bonus */
+.insta-bonus {
+background: linear-gradient(135deg, #f9f0fb 0%, #fce8e0 100%);
+border: 2px dashed var(--coral);
+border-radius: 14px;
+padding: 20px;
+text-align: center;
+margin-bottom: 20px;
+}
+.insta-bonus .bonus-title {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: 1.2rem;
+text-transform: uppercase;
+color: var(--slate-dk);
+margin-bottom: 6px;
+}
+.insta-bonus p { font-size: 0.9rem; color: var(--mid); margin-bottom: 12px; }
+.insta-handles {
+display: flex;
+gap: 10px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.insta-handle {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: white;
+border: 2px solid var(--coral);
+color: var(--coral);
+border-radius: 30px;
+padding: 8px 16px;
+font-weight: 700;
+font-size: 0.88rem;
+text-decoration: none;
+transition: all 0.2s;
+}
+.insta-handle:hover { background: var(--coral); color: white; }
+.insta-icon { font-size: 1rem; }
+
+.submit-btn {
+width: 100%;
+background: var(--coral);
+color: white;
+border: none;
+border-radius: 14px;
+padding: 18px;
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: 1.4rem;
+letter-spacing: 1px;
+text-transform: uppercase;
+cursor: pointer;
+transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+box-shadow: 0 6px 24px rgba(232, 114, 90, 0.4);
+}
+.submit-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 32px rgba(232, 114, 90, 0.5);
+}
+.submit-btn:active { transform: translateY(0); }
+
+.form-legal {
+font-size: 0.78rem;
+color: var(--mid);
+text-align: center;
+margin-top: 14px;
+line-height: 1.5;
+}
+
+/* success */
+.success-overlay {
+display: none;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 40px 20px;
+}
+.success-overlay.active { display: flex; }
+.success-icon { font-size: 4rem; margin-bottom: 16px; }
+.success-overlay h3 {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: 2rem;
+color: var(--slate-dk);
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+.success-overlay p { color: var(--mid); font-size: 0.95rem; }
+
+/* ── RÈGLEMENT ── */
+.reglement {
+padding: 48px 24px;
+background: var(--sand);
+}
+.reglement-toggle {
+width: 100%;
+background: white;
+border: 2px solid var(--slate);
+border-radius: 14px;
+padding: 18px 24px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+cursor: pointer;
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 700;
+font-size: 1.1rem;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: var(--slate-dk);
+transition: background 0.2s;
+}
+.reglement-toggle:hover { background: #f0f4f8; }
+.toggle-arrow { transition: transform 0.3s; font-size: 1.2rem; }
+.toggle-arrow.open { transform: rotate(180deg); }
+
+.reglement-content {
+display: none;
+background: white;
+border: 2px solid var(--slate);
+border-top: none;
+border-radius: 0 0 14px 14px;
+padding: 28px 24px;
+}
+.reglement-content.open { display: block; }
+
+.reg-header {
+text-align: center;
+margin-bottom: 28px;
+}
+.reg-header .wah-logo {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 900;
+font-size: 2.5rem;
+color: var(--coral);
+letter-spacing: 4px;
+display: block;
+}
+.reg-header .wah-sub {
+font-size: 0.75rem;
+letter-spacing: 3px;
+color: var(--mid);
+text-transform: uppercase;
+}
+.reg-header h2 {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: 1.3rem;
+color: var(--slate-dk);
+text-transform: uppercase;
+margin-top: 16px;
+text-decoration: underline;
+}
+.reg-header .reg-subtitle {
+font-size: 0.9rem;
+color: var(--mid);
+margin-top: 6px;
+}
+
+.reg-article {
+margin-bottom: 24px;
+}
+.reg-article h3 {
+font-family: 'Barlow Condensed', sans-serif;
+font-weight: 800;
+font-size: 1rem;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: var(--slate-dk);
+margin-bottom: 10px;
+padding-bottom: 6px;
+border-bottom: 2px solid var(--coral);
+}
+.reg-article p, .reg-article li {
+font-size: 0.88rem;
+line-height: 1.65;
+color: #444;
+margin-bottom: 8px;
+}
+.reg-article ul {
+padding-left: 20px;
+}
+.reg-article li { margin-bottom: 4px; }
+.highlight { color: var(--coral); font-weight: 600; }
+
+/* ── FOOTER ── */
+footer {
+background: var(--slate-dk);
+color: rgba(255,255,255,0.6);
+text-align: center;
+padding: 28px 24px;
+font-size: 0.78rem;
+line-height: 1.7;
+}
+footer strong { color: rgba(255,255,255,0.9); }
+footer a { color: var(--coral); text-decoration: none; }
+
+@media (max-width: 480px) {
+.field-row { grid-template-columns: 1fr; }
+.form-card { padding: 24px 20px; }
+}
+```
+
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+
+<section class="hero">
+<div class="hero-brand">
+<span class="brand-pill">🌿 JARDILAND LATTES</span>
+<span class="brand-x">×</span>
+<span class="brand-pill">WAH IMMOBILIER</span>
+</div>
+<h1>
+Tentez de gagner
+<span>un bon d'achat</span>
+</h1>
+<div class="prize-badge">🎁 50 € chez Jardiland</div>
+<p class="hero-sub">Participation gratuite · Sans obligation d'achat</p>
+</section>
+
+<!-- ── DATES ── -->
+
+<div class="dates-strip">
+Concours du <span>14 au 17 mai 2026</span> · Tirage au sort le <span>19 mai 2026</span>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+
+<section class="how">
+<div class="container">
+<p class="section-label">Comment participer</p>
+<h2 class="section-title">C'est simple &amp; rapide</h2>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-text">
+<strong>Remplissez le formulaire</strong>
+<p>Nom, prénom, contact, situation — 30 secondes chrono.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-text">
+<strong>Doublez vos chances</strong>
+<p>Suivez nos deux comptes Instagram pour une participation supplémentaire.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-text">
+<strong>Résultats le 19 mai</strong>
+<p>Le gagnant sera contacté sous 7 jours après le tirage au sort.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ── FORM ── -->
+
+<section class="form-section">
+<div class="container">
+<p class="section-label">Inscription</p>
+<h2 class="section-title">Participez maintenant</h2>
+
+```
+<div class="form-card">
+
+<!-- SUCCESS STATE -->
+<div class="success-overlay" id="successMsg">
+<div class="success-icon">🎉</div>
+<h3>Bravo, vous êtes inscrit·e !</h3>
+<p>Nous vous contacterons si vous êtes tiré·e au sort.<br>Bonne chance !</p>
+</div>
+
+<!-- FORM -->
+<div id="formContent">
+<div class="field-group">
+<div class="field-row">
+<div>
+<label for="nom">Nom *</label>
+<input type="text" id="nom" placeholder="Dupont" required />
+</div>
+<div>
+<label for="prenom">Prénom *</label>
+<input type="text" id="prenom" placeholder="Marie" required />
+</div>
+</div>
+<div>
+<label for="contact">Téléphone ou e-mail *</label>
+<input type="text" id="contact" placeholder="06 XX XX XX XX ou nom@email.fr" required />
+</div>
+<div class="field-row">
+<div>
+<label for="cp">Code postal *</label>
+<input type="text" id="cp" placeholder="34970" required />
+</div>
+<div>
+<label for="ville">Ville *</label>
+<input type="text" id="ville" placeholder="Lattes" required />
+</div>
+</div>
+</div>
+
+<!-- Propriétaire / Locataire -->
+<div class="checkbox-group">
+<legend>Vous êtes… *</legend>
+<div class="check-options" id="statusGroup">
+<label class="check-label">
+<input type="radio" name="status" value="proprietaire" />
+<span class="check-icon"></span>
+Propriétaire
+</label>
+<label class="check-label">
+<input type="radio" name="status" value="locataire" />
+<span class="check-icon"></span>
+Locataire
+</label>
+</div>
+</div>
+
+<!-- Projet immo -->
+<div class="checkbox-group">
+<legend>Vous avez ou quelqu'un que vous connaissez a un projet immobilier (vendeur / acquéreur) en cours ?</legend>
+<div class="check-options" id="projetGroup">
+<label class="check-label">
+<input type="radio" name="projet" value="oui" />
+<span class="check-icon"></span>
+Oui
+</label>
+<label class="check-label">
+<input type="radio" name="projet" value="non" />
+<span class="check-icon"></span>
+Non
+</label>
+</div>
+</div>
+
+<hr class="divider" />
+
+<!-- Instagram bonus -->
+<div class="insta-bonus">
+<div class="bonus-title">🌟 Doublez vos chances !</div>
+<p>Suivez nos deux comptes Instagram et augmentez vos chances de gagner.</p>
+<div class="insta-handles">
+<a href="https://instagram.com/jardiland_montpellier_lattes" target="_blank" class="insta-handle">
+<span class="insta-icon">📷</span>
+@jardiland_montpellier_lattes
+</a>
+<a href="https://instagram.com/annabelle_wah_immobilier" target="_blank" class="insta-handle">
+<span class="insta-icon">📷</span>
+@annabelle_wah_immobilier
+</a>
+</div>
+</div>
+
+<button class="submit-btn" onclick="handleSubmit()">
+Je participe au concours →
+</button>
+
+<p class="form-legal">
+En participant, vous acceptez le règlement du concours et consentez à être recontacté(e) dans le cadre de ce jeu.<br>
+Participation gratuite et sans obligation d'achat. Un seul bulletin par personne.
+</p>
+</div>
+</div>
+```
+
+</div>
+</section>
+
+<!-- ── RÈGLEMENT ── -->
+
+<section class="reglement">
+<div class="container">
+<p class="section-label">Transparence</p>
+<h2 class="section-title" style="color:var(--slate-dk);">Règlement complet</h2>
+
+```
+<button class="reglement-toggle" onclick="toggleReglement(this)">
+<span>Lire le règlement du jeu concours</span>
+<span class="toggle-arrow" id="toggleArrow">▼</span>
+</button>
+
+<div class="reglement-content" id="reglementContent">
+
+<div class="reg-header">
+<span class="wah-logo">WAH</span>
+<span class="wah-sub">We are human</span>
+<h2>Règlement du jeu</h2>
+<p class="reg-subtitle">Jeu local « <strong>Jardiland-WAH</strong> – Lattes »</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 1 – Société organisatrice</h3>
+<p>
+<span class="highlight">Annabelle Malialin</span>, Agent commercial en transaction pour le réseau WAH
+(ci-après dénommée « la société organisatrice »), entrepreneur individuel
+SIRET <span class="highlight">98498013600027</span> — RSAC <span class="highlight">984980136</span> RCS <span class="highlight">Montpellier</span>,
+dont le siège est <span class="highlight">994 avenue des Abrivados, 34400 Lunel</span>,
+représentée par <span class="highlight">Annabelle Malialin</span>, gérante, organise un Jeu local
+avec tirage au sort du <span class="highlight">14/05/2026</span> au
+<span class="highlight">17/05/2026</span> intitulé
+« <span class="highlight">Jardiland-WAH</span> », dans les conditions ci-après définies.
+</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 2 – Conditions générales de participation</h3>
+<p>La participation au Jeu local « <span class="highlight">Jardiland-WAH</span> » est gratuite et sans obligation d'achat.</p>
+<p>La participation est ouverte à toute personne physique majeure (personne âgée de 18 ans et plus au jour de l'inscription).</p>
+<p>Ne peuvent participer au Jeu local les personnes suivantes :</p>
+<ul>
+<li>Les mandataires sociaux, associés et employés (toute personne liée par un contrat de travail direct ou indirect, permanent ou temporaire à la société organisatrice).</li>
+<li>D'une façon générale, toutes les personnes ayant collaboré à la conception, l'organisation, la réalisation et/ou la gestion du Jeu local.</li>
+<li>Les personnels des agences WAH ainsi que les agents commerciaux travaillant avec les agences WAH et réseau WAH.</li>
+<li>Les responsables et le personnel salarié de <span class="highlight">Jardiland Lattes</span>.</li>
+</ul>
+<p>La société organisatrice se réserve le droit de procéder à toute vérification de la validité de la participation.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 3 – Modalités et conditions d'inscription</h3>
+<p>Les personnes souhaitant participer devront remplir le bulletin de participation en complétant au minimum les informations suivantes : Nom et prénom, Téléphone ou e-mail, Code postal et ville, Situation (propriétaire ou locataire).</p>
+<p>Toute personne remplissant volontairement le bulletin reconnaît avoir pris connaissance du présent règlement et en accepter les termes sans réserve.</p>
+<p>Tout questionnaire incomplet ou illisible sera considéré comme nul. Un seul bulletin par participant.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 4 – Dotations</h3>
+<p>Lot à gagner : Un (1) Bon d'achat d'une valeur de <span class="highlight">50 € (cinquante euros)</span>.</p>
+<p>Valable sur l'ensemble de <span class="highlight">Jardiland Lattes, Rue Marcel Carné, 34970 Lattes</span>.</p>
+<p>Ce bon d'achat ne peut donner lieu à aucun remboursement, total ou partiel, et peut être utilisé en plusieurs fois jusqu'à sa date de validité.</p>
+<p>La valeur commerciale indicative du lot ne peut donner lieu à aucune contestation ni à un échange ou à un remboursement, total ou partiel, en numéraire ou sous toute autre forme.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 5 – Tirage au sort</h3>
+<p>
+Le tirage au sort sera effectué le <span class="highlight">19/05/2026 à 13h00</span> à l'agence
+<span class="highlight">WAH Immobilier, 994 avenue des Abrivados, 34400 Lunel</span>,
+en présence des personnes disponibles du réseau WAH.
+Le tirage au sort sera fait par le personnel de <span class="highlight">Jardiland Lattes</span> ou personnes présentes du réseau WAH.
+</p>
+<p>Afin d'informer les participants, la photo, le prénom du gagnant, la ville et/ou département de résidence et la nature du lot gagné seront publiés sur tous les supports des réseaux sociaux du réseau WAH et de la société organisatrice, ainsi que les réseaux sociaux de <span class="highlight">Jardiland Lattes</span>.</p>
+<p>La société organisatrice se réserve le droit d'écourter, de proroger, de reporter, de modifier ou d'annuler le tirage au sort si des circonstances exceptionnelles l'exigent (cas de force majeure).</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 6 – Remise des lots</h3>
+<p>Le gagnant recevra son lot sous forme de bon cadeau, disponible à partir du <span class="highlight">mercredi 20/05/2026 à 12h00</span>. Il dispose d'un délai maximum d'un (1) an à compter du tirage au sort pour le récupérer, soit jusqu'au <span class="highlight">19/05/2027</span>, et devra le retirer contre décharge dans les locaux de <span class="highlight">Jardiland Lattes, Rue Marcel Carné, 34970 Lattes</span>.</p>
+<p>Il sera contacté par téléphone et/ou mail dans un délai de sept (7) jours après avoir été tiré au sort. Dans le cas où le gagnant n'aurait pas retiré son lot dans le délai d'un (1) an, il sera considéré comme ayant renoncé à son lot.</p>
+<p>Le lot est nominatif et ne pourra être attribué à aucune autre personne que celle tirée au sort, sauf en cas de participation déloyale.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 7 – Acceptation du règlement</h3>
+<p>La seule participation au Jeu local « <span class="highlight">Jardiland-WAH</span> » vaut acceptation pleine et entière de toutes les clauses du présent règlement.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 8 – Données personnelles</h3>
+<p>Les participants sont informés que la société organisatrice, en tant que responsable du traitement, procède à des traitements automatisés des données à caractère personnel des participants.</p>
+<p>Les données collectées ont pour finalité : la participation au Jeu local et, le cas échéant, l'attribution des lots.</p>
+<p>Sous réserve de leur consentement exprès, les informations collectées pourront être utilisées afin de les informer régulièrement sur le marché de l'immobilier et sur les services proposés.</p>
+<p>Conformément à la législation en vigueur, les participants disposent d'un droit d'accès, de rectification, de portabilité, d'effacement, de limitation et d'opposition au traitement des données les concernant, en contactant :<br>
+<span class="highlight">Annabelle Malialin</span>, agent mandataire pour le réseau WAH<br>
+994 avenue des Abrivados – 34400 Lunel<br>
+<a href="mailto:annabelle.malialin@wahuman.com">annabelle.malialin@wahuman.com</a></p>
+<p>Les participants disposent également de la faculté d'introduire une réclamation auprès de la CNIL et peuvent s'inscrire sur <a href="https://www.bloctel.gouv.fr" target="_blank">www.bloctel.gouv.fr</a> pour s'opposer au démarchage téléphonique.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 9 – Limitation de responsabilité</h3>
+<p>La société organisatrice ne saurait être tenue responsable d'une perte ou détérioration des données relatives à l'inscription d'un participant qui seraient causées par tout équipement ou programme associé à l'organisation du tirage au sort.</p>
+<p>La société organisatrice ne saurait être tenue responsable de tout dommage que le gagnant pourrait subir à l'occasion de l'utilisation et/ou de la jouissance des lots à gagner.</p>
+</div>
+
+<div class="reg-article">
+<h3>Article 10 – Loi applicable et litiges</h3>
+<p>Le présent règlement est soumis à la loi française. Tout litige relatif à l'application ou l'interprétation du présent règlement fera l'objet d'un règlement amiable. À défaut d'accord entre les parties, il sera porté devant les tribunaux français compétents.</p>
+</div>
+
+</div><!-- /reglement-content -->
+```
+
+</div>
+</section>
+
+<!-- ── FOOTER ── -->
+
+<footer>
+<strong>WAH – We Are Human</strong><br>
+Annabelle Malialin · Agent mandataire immobilier · RSAC 984980136 Montpellier<br>
+994 avenue des Abrivados · 34400 Lunel<br>
+<a href="mailto:annabelle.malialin@wahuman.com">annabelle.malialin@wahuman.com</a> ·
+<a href="tel:0766588278">07 66 58 82 78</a><br><br>
+<small>Jeu sans obligation d'achat · Gratuit · Réservé aux personnes majeures résidant en France · © 2026</small>
+</footer>
+
+<script>
+// Radio button visual state (fallback for :has() support)
+document.querySelectorAll('.check-options').forEach(group => {
+group.querySelectorAll('input[type="radio"]').forEach(radio => {
+radio.addEventListener('change', () => {
+group.querySelectorAll('.check-label').forEach(l => l.classList.remove('checked'));
+radio.closest('.check-label').classList.add('checked');
+});
+});
+});
+
+// ══════════════════════════════════════════════════════
+// COLLE ICI L'URL de ton Google Apps Script après déploiement
+// Exemple : https://script.google.com/macros/s/XXXX.../exec
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwI0EqKhfQaHgENeHBpww70RjXlUbk_g5tt0aXlhuMREMau8B4D229vtNiSCuXWaeMU/exec';
+// ══════════════════════════════════════════════════════
+
+async function handleSubmit() {
+const nom = document.getElementById('nom').value.trim();
+const prenom = document.getElementById('prenom').value.trim();
+const contact = document.getElementById('contact').value.trim();
+const cp = document.getElementById('cp').value.trim();
+const ville = document.getElementById('ville').value.trim();
+const status = document.querySelector('input[name="status"]:checked');
+const projet = document.querySelector('input[name="projet"]:checked');
+
+if (!nom || !prenom || !contact || !cp || !ville || !status) {
+alert('Merci de remplir tous les champs obligatoires (*).');
+return;
+}
+
+// Désactiver le bouton pendant l'envoi
+const btn = document.querySelector('.submit-btn');
+btn.disabled = true;
+btn.textContent = 'Envoi en cours…';
+
+const data = {
+nom,
+prenom,
+contact,
+cp,
+ville,
+statut: status.value,
+projet_immo: projet ? projet.value : 'non renseigné',
+date: new Date().toLocaleString('fr-FR')
+};
+
+try {
+await fetch(APPS_SCRIPT_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify(data)
+});
+} catch (e) {
+// no-cors: pas d'erreur attendue côté client
+}
+
+document.getElementById('formContent').style.display = 'none';
+document.getElementById('successMsg').classList.add('active');
+window.scrollTo({ top: document.querySelector('.form-section').offsetTop - 20, behavior: 'smooth' });
+}
+
+function toggleReglement(btn) {
+const content = document.getElementById('reglementContent');
+const arrow = document.getElementById('toggleArrow');
+const isOpen = content.classList.contains('open');
+content.classList.toggle('open', !isOpen);
+arrow.classList.toggle('open', !isOpen);
+}
+</script>
+
+</body>
+</html>
